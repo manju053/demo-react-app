@@ -5,7 +5,6 @@ export const signInWithEmailAndPassword = async ({ email, password }) => {
 }
 
 export const createUser = async ({ email, password, user_name }, selectedImage) => {
-    const PHOTO_URL = 'gs://react-social-media-app-ef2e4.appspot.com'
     console.log("selected file:", selectedImage)
     const storageRef = fireStorage.ref()
     const createdUser = await auth.createUserWithEmailAndPassword(email, password)
@@ -34,14 +33,14 @@ export const createUser = async ({ email, password, user_name }, selectedImage) 
         // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
         var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
         alert('Upload is ' + progress + '% done');
-        switch (snapshot.state) {
-          case 'paused': // or 'paused'
-            alert('Upload is paused');
-            break;
-          case 'running': // or 'running'
-            alert('Upload is running');
-            break;
-        }
+        // switch (snapshot.state) {
+        //   case 'paused': // or 'paused'
+        //     alert('Upload is paused');
+        //     break;
+        //   case 'running': // or 'running'
+        //     alert('Upload is running');
+        //     break;
+        // }
       }, function(error) {
         alert("Error in upload::::::", error)
       }, function() {
