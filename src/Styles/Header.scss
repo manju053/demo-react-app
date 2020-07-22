@@ -1,0 +1,45 @@
+@import '../index.css';
+
+.header_wrapper {
+    background-color: cadetblue;
+}
+
+.logo_section {
+    width: 10%;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+.nav {
+    display: flex;
+    padding: 2%;
+}
+
+.logo_section > a {
+    text-decoration: none;
+    color: cornsilk;
+    font-weight: bolder;
+    flex: 1;
+}
+
+ul.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+li.list-item {
+    margin-right: 5%;
+}
+
+.list-item > a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Lobster', cursive;;
+}
+
+
+

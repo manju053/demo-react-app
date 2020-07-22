@@ -1,0 +1,76 @@
+.login_wrapper {
+    width: 30%;
+    margin: 10% auto;
+    text-align: center;
+    background: white;
+    box-shadow: 5px 5px 5px 5px #1111;
+    font-family: 'Open Sans', sans-serif !important;
+    
+}
+
+.form_title {
+    border-bottom: 1px solid gainsboro;
+    padding: 1rem 0 1rem 0;
+    background: antiquewhite;
+    h3 {
+        margin: 0;
+    }
+}
+
+form.form_section {
+    display: flex;
+    flex-direction: column;
+
+}
+.form_group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form_group input {
+    height: 3rem;
+    width: 60%;
+    border: none;
+    border: 1px inset #80808038;
+    outline: none;
+    border-radius: 1rem;
+    padding: 0.2rem;
+}
+
+.btn_section button {
+    width: 39%;
+    padding: 1rem;
+    background: bisque;
+    border: navajowhite;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.form_footer a {
+    font-size: 0.9rem;
+}
+
+.form_footer p {
+    font-size: 0.8rem;
+}
+
+.err_class {
+    color: red;
+}
+
+.register_btn, .forgot_password_btn {
+    border: none;
+    text-decoration: underline;
+    background: none;
+    color: #0000ffbd;
+    outline: none;
+    cursor: pointer;
+}
+
+.register_btn:focus, .forgot_password_btn:focus {
+    color: violet;
+}
+

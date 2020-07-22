@@ -1,0 +1,25 @@
+.title_section {
+    display: flex;
+}
+
+.user_imag {
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+}
+
+h3.user_name {
+    font-size: .9rem;
+
+}
+
+p.created_at {
+    font-size: .7rem;
+}
+h3.user_name, p.created_at {
+    margin: 0;
+}
+
+.title_info {
+    margin-left: 7%;
+}

@@ -1,0 +1,19 @@
+.actions {
+    display: flex;
+    justify-content: space-evenly;
+    border-top: 1px solid gainsboro;
+    margin-top: 4%;
+    padding-top: 4%;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.MuiSvgIcon-root {
+    font-size: 1.2rem !important;
+    fill: gray !important;
+    margin-right: 10%;
+}
+
+.like, .comment, .share {
+    display: flex;
+}
