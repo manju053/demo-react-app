@@ -2,7 +2,7 @@
 export const validate = values => {
     let errors = {}
     const validEmailRegex =
-        RegExp(/^(([^<>()[\].,;:\s@"]+(\.[^<>()\[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@\"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i);
+        RegExp(/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i);
     if (!values.user_name) {
         errors.user_name = 'User Name is required'
     } 

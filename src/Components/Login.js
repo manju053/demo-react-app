@@ -6,7 +6,7 @@ import {signInWithEmailAndPassword} from '../Services/AuthService'
 
 const Login = (props) => {
     const validEmailRegex =
-    RegExp(/^(([^<>()[\].,;:\s@"]+(\.[^<>()\[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@\"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i);
+    RegExp(/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i);
     const title = 'Login'
     const [loginForm, setLoginForm] = useState({
         'email': '',
@@ -45,17 +45,13 @@ const Login = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         validateEmail(loginForm.email)
-    }, [loginForm])
+    }, [loginForm.email, validateEmail])
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         validatePassword(loginForm.password)
-    }, [loginForm])
+    }, [loginForm.password, validatePassword])
 
-   // eslint-disable-next-line react-hooks/exhaustive-deps
-    useEffect(() => {
-        validateConfirmPassword(loginForm.password)
-    }, [loginForm])
 
     const validateEmail = (value) => {
         if (!value) {
