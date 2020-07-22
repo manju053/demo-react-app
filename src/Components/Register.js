@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useFormik } from 'formik'
 import Styles from '../Styles/Styles.module.css'
 import { validate } from './RegisterValidation'
 import { createUser } from '../Services/AuthService'
 import { useHistory } from 'react-router-dom'
 import { CircularProgress } from '@material-ui/core'
-import { fireStorage } from '../firebase'
 
 const Register = () => {
 

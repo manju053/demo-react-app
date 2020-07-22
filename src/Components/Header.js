@@ -46,13 +46,13 @@ const Header = () => {
                     <li className="list-item">
                         <Link to="/about">About</Link>
                     </li>
-                    {
+                    {/* {
                         !userContext.user ? <li className="list-item">
                             <Link to="/login">Login</Link>
                         </li> : <li className="list-item">
                                 <a href="" onClick={(e) => signout(e)}>Logout</a>
                             </li>
-                    }
+                    } */}
 
                     {
                         !userContext.user && <li className="list-item">
@@ -63,7 +63,7 @@ const Header = () => {
                     {
                         userContext.user && 
                         <>
-                        <img src={userContext.user.photoURL} className={Styles.profile_pic}/>
+                        <img src={userContext.user.photoURL} className={Styles.profile_pic} alt="profile_pic"/>
                         <li className="list-item">
                         <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
                             {userContext.user.displayName}
