@@ -65,20 +65,13 @@ const Login = (props) => {
         setLoginForm({ ...loginForm, passwordValid: true, errorMsg: { ...loginForm.errorMsg, password: '' }, formValid: true })
     }
 
-    /* eslint-disable-next-line react-hooks/exhaustive-deps */
     useEffect(() => {
         validateEmail(loginForm.email)
-    }, [loginForm.email])
+    }, [loginForm.email]) // eslint-disable-line react-hooks/exhaustive-deps
 
-    /* eslint-disable-next-line react-hooks/exhaustive-deps */
     useEffect(() => {
         validatePassword(loginForm.password)
-    }, [loginForm.password])
-
-
-    
-
-    
+    }, [loginForm.password]) // eslint-disable-line react-hooks/exhaustive-deps
 
     const register = (e) => {
         history.push('/register')
