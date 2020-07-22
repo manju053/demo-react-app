@@ -41,18 +41,6 @@ const Login = (props) => {
         setLoginForm({ ...loginForm, password: e.target.value })
     }
 
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    useEffect(() => {
-        validateEmail(loginForm.email)
-    }, [loginForm.email, validateEmail])
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    useEffect(() => {
-        validatePassword(loginForm.password)
-    }, [loginForm.password, validatePassword])
-
-
     const validateEmail = (value) => {
         if (!value) {
             setLoginForm({ ...loginForm, emailValid: false, formValid: false, errorMsg: { ...loginForm.errorMsg, email: 'Email Field format is incorrect' } })
@@ -77,19 +65,20 @@ const Login = (props) => {
         setLoginForm({ ...loginForm, passwordValid: true, errorMsg: { ...loginForm.errorMsg, password: '' }, formValid: true })
     }
 
-    const validateConfirmPassword = (value) => {
-        if (!value) {
-            setLoginForm({ ...loginForm, confirmPasswordValid: false, errorMsg: { ...loginForm.errorMsg, confirmPassword: 'Please enter confirm password' }, formValid: false })
-            return
-        } else {
-            if (value !== loginForm.password) {
-                setLoginForm({ ...loginForm, confirmPasswordValid: false, errorMsg: { ...loginForm.errorMsg, confirmPassword: 'Confirm password does not match password' }, formValid: false })
-            return
-            }
-        }
+    /* eslint-disable-next-line react-hooks/exhaustive-deps */
+    useEffect(() => {
+        validateEmail(loginForm.email)
+    }, [loginForm.email])
 
-        setLoginForm({ ...loginForm, confirmPasswordValid: true, errorMsg: { ...loginForm.errorMsg, password: '' }, formValid: true })
-    }
+    /* eslint-disable-next-line react-hooks/exhaustive-deps */
+    useEffect(() => {
+        validatePassword(loginForm.password)
+    }, [loginForm.password])
+
+
+    
+
+    
 
     const register = (e) => {
         history.push('/register')
