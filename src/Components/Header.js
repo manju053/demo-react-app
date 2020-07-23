@@ -46,13 +46,14 @@ const Header = () => {
                     <li className="list-item">
                         <Link to="/about">About</Link>
                     </li>
-                    {/* {
-                        !userContext.user ? <li className="list-item">
+                    {
+                        
+                        !userContext.user ? <li className="list-item"> 
                             <Link to="/login">Login</Link>
                         </li> : <li className="list-item">
-                                <a href="" onClick={(e) => signout(e)}>Logout</a>
-                            </li>
-                    } */}
+                                <a href="" /* eslint-disable-line */ onClick={(e) => signout(e)}>Logout</a>  
+                            </li> 
+                    } 
 
                     {
                         !userContext.user && <li className="list-item">
