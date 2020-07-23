@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Header from './Components/Header';
 import Login from './Components/Login';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Home from './Components/Home';
 import UserProvider from './Context/UserProvider';
 import { GuardProvider, GuardedRoute } from 'react-router-guards';
@@ -17,23 +17,26 @@ function App() {
           <Header />
 
           <Switch>
-          <Route path="/">
-              <div className={Styles.register_section}>
-                <Login />
-              </div>
-            </Route>
-            <Route path="/register">
+
+
+            <Route exact path="/register">
               <div className={Styles.register_section}>
                 <Register />
               </div>
             </Route>
-            <Route path="/login">
+            <Route exact path="/login">
               <div className="login_section">
                 <Login />
               </div>
             </Route>
+            <Route exact path="/">
+              <div className="login_section">
+                <Redirect to="/login" />
+              </div>
+            </Route>
+
             <GuardProvider guards={[requireLogin]}>
-              <GuardedRoute path="/home" >
+              <GuardedRoute exact path="/home" >
                 <div className="home_section">
                   <Home />
                 </div>
