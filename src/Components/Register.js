@@ -39,7 +39,6 @@ const Register = () => {
     })
 
     const fileChangeHandler = (e) => {
-        console.log(e.target.files[0]['name']);
 
         setSelectedImage(e.target.files[0])
 

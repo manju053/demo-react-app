@@ -17,6 +17,11 @@ function App() {
           <Header />
 
           <Switch>
+          <Route path="/">
+              <div className={Styles.register_section}>
+                <Login />
+              </div>
+            </Route>
             <Route path="/register">
               <div className={Styles.register_section}>
                 <Register />

@@ -19,7 +19,6 @@ const Header = () => {
         setAnchorEl(null);
     };
     const userContext = useContext(UserContext)
-    console.log("User:::::::", userContext.user)
     const history = useHistory()
 
     const signout = (e) => {

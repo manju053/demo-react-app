@@ -5,7 +5,6 @@ export const signInWithEmailAndPassword = async ({ email, password }) => {
 }
 
 export const createUser = async ({ email, password, user_name }, selectedImage) => {
-    console.log("selected file:", selectedImage)
     const storageRef = fireStorage.ref()
     const createdUser = await auth.createUserWithEmailAndPassword(email, password)
     const user = auth.currentUser
@@ -23,7 +22,6 @@ export const createUser = async ({ email, password, user_name }, selectedImage) 
     //     })
     // })
     // .catch(error => {
-    //     console.log("Upload error::::::", error);
         
     // })
 
@@ -47,7 +45,6 @@ export const createUser = async ({ email, password, user_name }, selectedImage) 
         // Handle successful uploads on complete
         // For instance, get the download URL: https://firebasestorage.googleapis.com/...
         uploadTask.snapshot.ref.getDownloadURL().then(async function(downloadURL) {
-          console.log('File available at', downloadURL);
           await user.updateProfile({
             displayName: user_name,
             photoURL: downloadURL

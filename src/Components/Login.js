@@ -22,7 +22,6 @@ const Login = (props) => {
 
     let history = useHistory();
     const handleSubmit = (e) => {
-        console.log("Inside submit")
         e.preventDefault()
         signInWithEmailAndPassword(loginForm).then(user => {
             history.push("/home")
